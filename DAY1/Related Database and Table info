@@ -1,0 +1,12 @@
+We will be running all these queries in MYSQL workbench. If you don't have this on your system watch the link below to install it.
+Workbench installation: https://www.youtube.com/watch?v=tHqVobAOyfM
+
+Add the files below and run it to create database and table for the use.
+
+***MAPPING***
+DAY1 -> SELECT ->  daily_sales_db.sql
+
+
+
+We will find sql file for queries below.
+***Queries***
