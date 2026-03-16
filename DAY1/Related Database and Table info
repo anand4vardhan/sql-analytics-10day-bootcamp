@@ -11,7 +11,10 @@ Follow the sequence to learn
 Add the files below and run it to create database and table for the use.
 
 ***MAPPING***
-DAY1 -> SELECT ->  select_statement_db1.sql
+1. DAY1 -> SELECT ->  select_statement_db1.sql
+2. For the rest of the day1 queries, we will use -> main_db_day.sql
+      ---- Database- CUSTOMER_DATABASE
+      ---- TABLES-   CUSTOMERS AND ORDERS
 
 
 
