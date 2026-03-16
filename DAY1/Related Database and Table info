@@ -4,7 +4,7 @@ Workbench installation: https://www.youtube.com/watch?v=tHqVobAOyfM
 Add the files below and run it to create database and table for the use.
 
 ***MAPPING***
-DAY1 -> SELECT ->  daily_sales_db.sql
+DAY1 -> SELECT ->  select_statement_db1.sql
 
 
 
