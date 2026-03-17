@@ -1,0 +1,33 @@
+In part2, we will cover filtering topics
+- WHERE
+- AND
+- OR
+- NOT
+- IN
+- BETWEEN
+- LIKE
+- IS NULL
+- IS NOT NULL
+
+
+*************Questions*************
+Q . Show customers from Delhi.
+Q . Show customers from Mumbai.
+Q . Show customers age above 30.
+Q . Show orders amount greater than 10000.
+Q . Show customer names starting with A.
+Q . Show customer names ending with a.
+Q . Show products containing letter 'o'.
+Q . Show Delhi customers age above 30.
+Q . Show Mumbai customers age below 28.
+Q . Show customers from Delhi OR Pune.
+Q . Show customers NOT from Noida.
+Q . Show customers city IN ('Delhi','Mumbai','Pune').
+Q . Show orders amount BETWEEN 5000 and 20000.
+Q . Show orders after March 1.
+Q . Show customers not between age 25 and 30
+Q . Show customers whose names do not start with vowels.
+Q . Show orders excluding laptops and phones.
+Q . Show customers where city is NULL.
+Q . Show customers where city is NOT NULL and age > 28.
+Q . Show expensive orders placed in January only.
