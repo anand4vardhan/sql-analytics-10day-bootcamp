@@ -1,24 +1,31 @@
 We will be running all these queries in MYSQL workbench. If you don't have this on your system watch the link below to install it.
 Workbench installation: https://www.youtube.com/watch?v=tHqVobAOyfM
 
-Follow the sequence to learn
-1. Select Basic 
-2. Use day1_functions_use_syntax_example.pdf file to learn all the syntax and usage for day1 functions. 
-   We will learn the functions by creating queries for different scenarios.
+-------------------------------------------------------------------------------------------------------
+A. Follow the sequence to learn
+-------------------------------------------------------------------------------------------------------
+1. Use day1_functions_use_syntax_example.pdf file to learn all the syntax and usage for day1 functions. 
+   We will learn the functions by creating queries for different scenarios. Read topics and question file
+   for each part, and try to solve the questions first yourself. Look for the .SQL file when you are stuck.
 
+2. Select Basic 
+3. Part1
+4. Part2
+5. Part3
+6. Part4
+7. Part5
+-------------------------------------------------------------------------------------------------------
+END A.
+-------------------------------------------------------------------------------------------------------
 
-
-
-
-Add the files below and run it to create database and table for the use.
-
-***MAPPING***
+*******************************************************************************************************
+B. Add the files below and run it to create database and table for the use.
+*******************************************************************************************************
 1. DAY1 -> SELECT ->  select_statement_db1.sql
 2. For the rest of the day1 queries, we will use -> main_db_day.sql
       ---- Database- CUSTOMER_DATABASE
       ---- TABLES-   CUSTOMERS AND ORDERS
+*******************************************************************************************************
+END B. 
+*******************************************************************************************************
 
-
-
-We will find sql file for queries below.
-***Queries***
