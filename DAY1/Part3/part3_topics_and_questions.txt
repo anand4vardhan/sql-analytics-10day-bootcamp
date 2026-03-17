@@ -1,0 +1,29 @@
+In part3, we will cover Aggregate function
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+
+
+*************Questions*************
+-- Q . Count total customers.
+-- Q . Count total orders.
+-- Q . Sum total revenue.
+-- Q . Average customer age.
+-- Q . Minimum age.
+-- Q . Maximum age.
+-- Q . Minimum order amount.
+-- Q . Maximum order amount.
+-- Q . Count distinct cities.
+-- Q . Count distinct products.
+-- Q . Sum all laptop sales.
+-- Q . Average phone order value.
+-- Q . Count orders above 10000.
+-- Q . Sum orders above 20000.
+-- Q . Average amount excluding laptops.
+-- Q . Count customers age above average age.
+-- Q . Sum top 10 highest orders.
+-- Q . Find difference between max and min amount.
+-- Q . Count customers signed up after average signup date.
+-- Q . Find median-like midpoint using aggregate logic.
