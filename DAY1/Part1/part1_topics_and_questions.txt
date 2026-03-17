@@ -1,0 +1,25 @@
+With the below questions we will Part1
+	SELECT
+	FROM
+	AS
+	DISTINCT
+	ORDER BY
+	LIMIT / TOP
+
+
+Q . Rename customer_name as name.
+Q . Rename amount as total_amount.
+Q . Show unique cities from customers.
+Q . Show unique product names from orders.
+Q . Sort customers by age ascending.
+Q . Sort customers by age descending.
+Q . Sort orders by amount descending.
+Q . Show first 5 customers.
+Q . Show first 10 orders.
+Q . Show top 3 highest order amounts.
+Q . Show customer names alphabetically and city reverse alphabetically.
+Q . Show latest 7 orders.
+Q . Show oldest 5 signed-up customers.
+Q . Show distinct city count with aliases.
+Q . Show customers ordered by signup year and age.
+Q . Show top 10 customers ordered by name length
