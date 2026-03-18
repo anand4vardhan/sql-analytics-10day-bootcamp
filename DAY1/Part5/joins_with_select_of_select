@@ -1,0 +1,203 @@
+# Understanding the Exact SQL Query for Top Spender City-wise -Refer to Q15 in Part5
+
+## Query
+
+```sql
+SELECT C1.CUSTOMER_NAME, C1.AMOUNT, C1.CITY FROM
+(
+SELECT C.CUSTOMER_NAME,O.AMOUNT,C.CITY FROM CUSTOMERS C JOIN ORDERS O
+ON C.CUSTOMER_ID=O.CUSTOMER_ID
+) C1
+JOIN
+(
+SELECT MAX(O.AMOUNT) AS BIG_SPEND ,C.CITY FROM CUSTOMERS C JOIN ORDERS O
+ON C.CUSTOMER_ID=O.CUSTOMER_ID
+GROUP BY C.CITY ORDER BY MAX(O.AMOUNT) DESC
+) T1
+ON
+C1.CITY=T1.CITY AND
+C1.AMOUNT=T1.BIG_SPEND
+;
+```
+
+---
+
+# Goal of This Query
+
+This query returns the customer whose single order amount is the highest inside each city.
+
+Important:
+This query does **not** calculate total spending across multiple orders.
+It finds the **largest single order** city-wise.
+
+---
+
+# How to Think Before Writing This Query
+
+To solve this type of problem, break it into two questions:
+
+1. Which customer belongs to which city and what amount did they spend?
+2. What is the maximum amount spent in each city?
+3. Match both results.
+
+This naturally creates two subqueries.
+
+---
+
+# First Subquery: Build Full Customer + Order Dataset
+
+```sql
+SELECT C.CUSTOMER_NAME,O.AMOUNT,C.CITY
+FROM CUSTOMERS C
+JOIN ORDERS O
+ON C.CUSTOMER_ID=O.CUSTOMER_ID
+```
+
+Alias:
+
+```sql
+C1
+```
+
+## Why this is done
+
+We need:
+
+* customer name
+* amount
+* city
+
+But these columns exist in different tables.
+
+### Table roles
+
+* CUSTOMERS = customer_name, city
+* ORDERS = amount
+
+So JOIN is mandatory.
+
+## Why alias C1?
+
+Because this complete result will later be reused.
+Alias gives short reference.
+
+---
+
+# Second Subquery: Find Maximum Amount Per City
+
+```sql
+SELECT MAX(O.AMOUNT) AS BIG_SPEND ,C.CITY
+FROM CUSTOMERS C
+JOIN ORDERS O
+ON C.CUSTOMER_ID=O.CUSTOMER_ID
+GROUP BY C.CITY
+```
+
+Alias:
+
+```sql
+T1
+```
+
+## Why MAX(O.AMOUNT)?
+
+We want highest spending amount inside each city.
+
+## Why GROUP BY C.CITY?
+
+Because maximum must be calculated separately for every city.
+
+Without GROUP BY:
+Only one global maximum comes.
+
+## Why alias BIG_SPEND?
+
+Because later we compare this value with customer order amount.
+
+---
+
+# Why ORDER BY inside subquery is unnecessary
+
+```sql
+ORDER BY MAX(O.AMOUNT) DESC
+```
+
+This does not affect final result because outer JOIN ignores ordering.
+
+It can be removed safely.
+
+Better version:
+
+```sql
+SELECT MAX(O.AMOUNT) AS BIG_SPEND, C.CITY
+FROM CUSTOMERS C
+JOIN ORDERS O
+ON C.CUSTOMER_ID = O.CUSTOMER_ID
+GROUP BY C.CITY
+```
+
+---
+
+# Final JOIN Logic
+
+```sql
+ON C1.CITY = T1.CITY
+AND C1.AMOUNT = T1.BIG_SPEND
+```
+
+## Why city match?
+
+Because Delhi max should match only Delhi customers.
+
+## Why amount match?
+
+Because only customer whose order equals max amount must remain.
+
+---
+
+# Final Result Logic
+
+After JOIN:
+Only those rows survive where:
+
+* city matches
+* amount equals city maximum
+
+---
+
+# Example
+
+## Customers Table
+
+| customer_name | city   |
+| ------------- | ------ |
+| Amit          | Delhi  |
+| Neha          | Mumbai |
+
+## Orders Table
+
+| customer_id | amount |
+| ----------- | ------ |
+| 1           | 5000   |
+| 1           | 7000   |
+| 2           | 9000   |
+
+## Final Output
+
+| customer_name | amount | city   |
+| ------------- | ------ | ------ |
+| Amit          | 7000   | Delhi  |
+| Neha          | 9000   | Mumbai |
+
+---
+
+# Important Interview Observation
+
+This query gives highest single transaction.
+
+If interviewer asks:
+"Top spender by total amount"
+
+Then SUM() is required instead of direct amount.
+
+---
