@@ -1,0 +1,28 @@
+In part3, we will cover Joins
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL JOIN
+
+
+*************Questions*************
+-- Q1: Show customer_name and product_name.
+-- Q2: Show customer_name and amount.
+-- Q3: Show city and product_name.
+-- Q4: Show customers who placed orders.
+-- Q5: Show all customers with orders.
+-- Q6: Show customers without orders.
+-- Q7: Show Delhi customers with orders.
+-- Q8: Show Mumbai customers and products bought.
+-- Q9: Show customer total spending.
+-- Q10: Show highest spender.
+-- Q11: Show lowest spender.
+-- Q12: Show city-wise revenue.
+-- Q13: Show customers who bought laptops.
+-- Q14: Show customers with multiple orders.
+-- Q15: Show top spender city-wise.
+-- Q16: Show latest order per customer.
+-- Q17: Show customers whose spending > city average.
+-- Q18: Show customers buying multiple products.
+-- Q19: Show customers whose first order was laptop.
+-- Q20: Show customers contributing top revenue
