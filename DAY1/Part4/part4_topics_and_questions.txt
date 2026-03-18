@@ -1,0 +1,26 @@
+In part3, we will cover Grouping concepts
+- GROUP BY
+- HAVING
+
+
+*************Questions*************
+-- Q1: Count customers city-wise.
+-- Q2: Average age city-wise.
+-- Q3: Count orders customer-wise.
+-- Q4: Sum orders customer-wise.
+-- Q5: Count products product-wise.
+-- Q6: Sum revenue product-wise.
+-- Q7: Average amount product-wise.
+-- Q8: Maximum order city-wise.
+-- Q9: Minimum order city-wise.
+-- Q10: Count signup by month.
+-- Q11: Count orders by month.
+-- Q12: Revenue month-wise.
+-- Q13: Customers having more than 1 order.
+-- Q14: Products sold more than 5 times.
+-- Q15: Customers whose total spending > 50000.
+-- Q16: Cities having average age > 30.
+-- Q17: Products with avg amount > 10000.
+-- Q18: Cities generating revenue > 2 lakh.
+-- Q19: Customers with spending above overall avg spending.
+-- Q20: Top 3 grouped revenues.
