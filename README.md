@@ -137,25 +137,14 @@ Deliverable:
 - top department revenue using CTE
 
 
-Day 6 — SQL Practice Queries 1–17
+Day 6 and Day 7 — SQL Practice Queries
 Focus:
-- filtering
-- aggregates
-- joins
+ADVANCED CTE QUESTION
 
 
-Day 7 — SQL Practice Queries 18–34
+Day 8 — SQL Practice Queries 
 Focus:
-- CASE
-- date functions
-- grouping
-
-
-Day 8 — SQL Practice Queries 35–50
-Focus:
-- window functions
-- subqueries
-- CTE
+- SCENARIO BASED QUESTIONS
 
 
 Day 9 — Mini Analytics Project 1
