@@ -139,7 +139,8 @@ Deliverable:
 
 Day 6 and Day 7 — SQL Practice Queries
 Focus:
-ADVANCED CTE QUESTION
+ADVANCED CTE QUESTION- Break the Questions into pieces and then merge them 1 by 1. 
+One of the most advanced questions are targeted here
 
 
 Day 8 — SQL Practice Queries 
